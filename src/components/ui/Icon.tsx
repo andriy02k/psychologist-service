@@ -13,7 +13,13 @@ export const Icon: React.FC<IconProps> = ({
   ...props
 }) => {
   return (
-    <svg className={className} width={size} height={size} {...props}>
+    <svg
+      className={className}
+      style={{ width: size, height: size }}
+      viewBox="0 0 24 24"
+      preserveAspectRatio="xMidYMid meet"
+      {...props}
+    >
       <use href={`/icons/sprite.svg#${icon}`} />
     </svg>
   );

@@ -33,3 +33,57 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+.custom-gradient {
+  background: linear-gradient(
+    to right,
+    var(--color-background),
+    var(--color-background),
+    rgba(108, 157, 255, 0.1)
+  );
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@layer utilities {
+  .sheet-content {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .sheet-content[data-state="open"] {
+    transform: translateY(0);
+    opacity: 1;
+    animation: slideInFromTop 0.3s ease-in-out;
+  }
+
+  .sheet-content[data-state="closed"] {
+    transform: translateY(-100%);
+    opacity: 0;
+    animation: slideOutToTop 0.3s ease-in-out;
+  }
+
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOutToTop {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+}
