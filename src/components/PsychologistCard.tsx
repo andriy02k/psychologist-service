@@ -1,28 +1,16 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { formatKey } from "@/lib/utils";
+import { formatKey, safeDisplay } from "@/lib/utils";
 import { Icon } from "./ui/Icon";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
+import { Psychologist } from "@/types";
 
-type Psychologist = {
-  avatar_url: string;
-  rating: number;
-  price_per_hour: number;
-  name: string;
-  experience: string;
-  license: string;
-  specialization: string;
-  initial_consultation: string;
-  about: string;
-  reviews: { reviewer: string; rating: number; comment: string }[];
-};
-
-type Props = {
+interface PsychologistCardProps {
   psychologist: Psychologist;
   isExpanded: boolean;
   toggleCard: (id: string) => void;
-};
+}
 
 const badgeKeys: (keyof Psychologist)[] = [
   "experience",
@@ -35,7 +23,7 @@ export const PsychologistCard = ({
   psychologist,
   isExpanded,
   toggleCard,
-}: Props) => {
+}: PsychologistCardProps) => {
   return (
     <div className="p-4 sm:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6 items-start bg-background rounded-3xl shadow-sm">
       {/* Avatar */}
@@ -94,7 +82,9 @@ export const PsychologistCard = ({
               className="text-sm sm:text-md font-medium whitespace-break-spaces md:whitespace-nowrap"
             >
               {formatKey(key)}:{" "}
-              <span className="text-foreground">{psychologist[key]}</span>
+              <span className="text-foreground">
+                {safeDisplay(psychologist[key])}
+              </span>
             </Badge>
           ))}
         </div>
