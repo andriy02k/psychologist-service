@@ -16,7 +16,7 @@ export const Banner = () => {
           We help you to reveal your potential, overcome challenges and find a
           guide in your own life with the help of our experienced psychologists.
         </p>
-        <Link href="/register">
+        <Link href="/psychologists">
           <Button
             variant="default"
             className="py-4 px-10 md:py-3 md:px-8 lg:py-4.5 lg:px-12 h-auto text-base sm:text-lg lg:text-xl font-medium flex items-center gap-3 sm:gap-4"
@@ -59,7 +59,7 @@ export const Banner = () => {
             </div>
           </div>
           {/* Green block */}
-          <div className="absolute top-[40%] -left-[5%] px-4 py-2 text-background text-xl bg-green-400 rounded-xl -rotate-12">
+          <div className="absolute top-[35%] -left-[5%] px-4 py-2 text-background text-xl bg-emerald-500 rounded-xl -rotate-12">
             ?
           </div>
           {/* Orange block "users" */}

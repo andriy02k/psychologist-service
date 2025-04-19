@@ -20,7 +20,10 @@
   --color-background: #fbfbfb;
   --color-foreground: #191a15;
   --color-primary: #3470ff;
+  --color-primary-hover: #255ee8;
   --color-primary-soft: rgba(52, 112, 255, 0.2);
+  --color-secondary: #8a8a89;
+  --color-secondary-background: #f3f3f3;
 }
 
 .dark {

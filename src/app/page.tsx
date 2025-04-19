@@ -1,5 +1,5 @@
-import { Banner } from "@/components/banner";
-import { Header } from "@/components/header";
+import { Banner } from "@/components/Banner";
+import { Header } from "@/components/Header";
 
 export default function Home() {
   return (

@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Dr. Sarah Davis",
+    "avatar_url": "https://ftp.goit.study/img/avatars/23.jpg",
+    "experience": "12 years",
+    "reviews": [
+      {
+        "reviewer": "Michael Brown",
+        "rating": 4.5,
+        "comment": "Dr. Davis has been a great help in managing my depression. Her insights have been valuable."
+      },
+      {
+        "reviewer": "Linda Johnson",
+        "rating": 5,
+        "comment": "I'm very satisfied with Dr. Davis's therapy. She's understanding and empathetic."
+      }
+    ],
+    "price_per_hour": 120,
+    "rating": 4.75,
+    "license": "Licensed Psychologist (License #67890)",
+    "specialization": "Depression and Mood Disorders",
+    "initial_consultation": "Free 45-minute initial consultation",
+    "about": "Dr. Sarah Davis is a highly experienced and licensed psychologist specializing in Depression and Mood Disorders. With 12 years of practice, she has helped numerous individuals overcome their depression and regain control of their lives. Dr. Davis is known for her empathetic and understanding approach to therapy, making her clients feel comfortable and supported throughout their journey to better mental health."
+  },
+  {
+    "name": "Dr. Mark Thompson",
+    "avatar_url": "https://ftp.goit.study/img/avatars/1.jpg",
+    "experience": "20 years",
+    "reviews": [
+      {
+        "reviewer": "Susan Roberts",
+        "rating": 4.8,
+        "comment": "I've had an excellent experience with Dr. Thompson. His expertise has been invaluable."
+      },
+      {
+        "reviewer": "David Lee",
+        "rating": 4.6,
+        "comment": "Dr. Thompson's guidance has helped me improve my relationships and well-being."
+      }
+    ],
+    "price_per_hour": 180,
+    "rating": 4.7,
+    "license": "Licensed Psychologist (License #54321)",
+    "specialization": "Relationship Counseling",
+    "initial_consultation": "Free 60-minute initial consultation",
+    "about": "Dr. Mark Thompson is a highly experienced and licensed psychologist specializing in Relationship Counseling. With 20 years of practice, he has helped individuals navigate and improve their relationships, leading to better well-being and personal growth. Dr. Thompson is known for his expertise and ability to provide invaluable insights to his clients. His approach to therapy is tailored to each individual's unique needs, ensuring a supportive and effective counseling experience."
+  },
+  {
+    "name": "Dr. Lisa Anderson",
+    "avatar_url": "https://ftp.goit.study/img/avatars/2.jpg",
+    "experience": "18 years",
+    "reviews": [
+      {
+        "reviewer": "Emily White",
+        "rating": 4.9,
+        "comment": "Dr. Anderson is an exceptional psychologist. Her insights have been life-changing for me."
+      },
+      {
+        "reviewer": "James Taylor",
+        "rating": 4.7,
+        "comment": "I highly recommend Dr. Anderson. She's helped me overcome my personal challenges."
+      }
+    ],
+    "price_per_hour": 160,
+    "rating": 4.8,
+    "license": "Licensed Psychologist (License #98765)",
+    "specialization": "Trauma and PTSD",
+    "initial_consultation": "Free 30-minute initial consultation",
+    "about": "Dr. Lisa Anderson is a highly experienced and licensed psychologist specializing in Trauma and PTSD. With 18 years of practice, she has been a beacon of support for individuals who have experienced trauma and its aftermath. Dr. Anderson is widely regarded for her exceptional insights and her ability to bring about life-changing transformations in her clients. Her approach to therapy is compassionate and tailored to each individual's unique needs, creating a safe and healing environment for those seeking her expertise."
+  }
+]
