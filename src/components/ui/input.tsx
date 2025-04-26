@@ -21,7 +21,7 @@ function Input({ className, type, variant = "default", ...props }: InputProps) {
         type={inputType}
         data-slot="input"
         className={cn(
-          "file:text-foreground placeholder:text-foreground selection:text-primary-foreground dark:bg-input/30 border-foreground/10 flex h-auto w-full min-w-0 rounded-xl border bg-transparent px-4.5 py-4 text-base font-normal shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          "file:text-foreground placeholder:text-foreground selection:text-primary-foreground dark:bg-input/30 border-foreground/10 flex h-auto w-full min-w-0 rounded-xl border bg-transparent px-4.5 py-4 text-base font-normal outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50",
           "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
           variant === "password" && "pr-12",
           className
