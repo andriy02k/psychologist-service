@@ -7,10 +7,10 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
 const formSchema = z.object({
-  name: z.string().min(2, "Ім'я повинно бути мінімум 2 символи"),
-  phone: z.string().min(10, "Номер телефону занадто короткий"),
-  time: z.string().nonempty("Оберіть час"),
-  email: z.string().email("Некоректний email"),
+  name: z.string().min(2, "The name must be at least 2 characters long."),
+  phone: z.string().min(10, "The phone number is too short"),
+  time: z.string().nonempty("Choose a time"),
+  email: z.string().email("Invalid email"),
   comments: z.string().optional(),
 });
 
