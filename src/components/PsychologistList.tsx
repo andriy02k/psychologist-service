@@ -1,18 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { getDatabase, ref, get } from "firebase/database";
-import { app } from "../../firebase";
+import { useState } from "react";
 import { PsychologistCard } from "@/components/PsychologistCard";
 import { PsychologistFilter } from "@/components/PsychologistFilter";
 import { usePsychologistFilter } from "@/hooks/useFilter";
 import { Psychologist } from "@/types";
 import { Button } from "./ui/button";
 
-export const PsychologistList = () => {
+interface PsychologistListProps {
+  psychologists: Psychologist[];
+}
+
+export const PsychologistList = ({ psychologists }: PsychologistListProps) => {
   const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
   const [filter, setFilter] = useState<string>("all");
-  const [psychologists, setPsychologists] = useState<Psychologist[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [itemsPerPage] = useState<number>(3);
 
@@ -22,25 +23,6 @@ export const PsychologistList = () => {
     0,
     currentPage * itemsPerPage
   );
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const db = getDatabase(app);
-        const dataRef = ref(db, "psychologists");
-        const snapshot = await get(dataRef);
-        if (snapshot.exists()) {
-          setPsychologists(snapshot.val());
-        } else {
-          console.log("No data available");
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   const toggleCard = (id: string) => {
     setExpandedCardId((prevId) => (prevId === id ? null : id));

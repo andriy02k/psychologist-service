@@ -68,7 +68,7 @@ export const PsychologistCard = ({
                   {psychologist.price_per_hour}$
                 </span>
               </div>
-              <FavoriteButton psychologistId={psychologist.id} />
+              <FavoriteButton psychologist={psychologist} />
             </div>
           </div>
 

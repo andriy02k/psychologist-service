@@ -3,15 +3,20 @@ import { auth } from "../../../firebase";
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
 import { cn } from "@/lib/utils";
+import { toast } from "sonner";
+import { Psychologist } from "@/types";
 
 interface FavoriteButtonProps {
-  psychologistId: string;
+  psychologist: Psychologist;
 }
 
-export const FavoriteButton = ({ psychologistId }: FavoriteButtonProps) => {
+export const FavoriteButton = ({ psychologist }: FavoriteButtonProps) => {
   const user = auth.currentUser;
   const db = getDatabase();
-  const favoriteRef = ref(db, `users/${user?.uid}/favorites/${psychologistId}`);
+  const favoriteRef = ref(
+    db,
+    `users/${user?.uid}/favorites/${psychologist.id}`
+  );
 
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -24,11 +29,11 @@ export const FavoriteButton = ({ psychologistId }: FavoriteButtonProps) => {
     };
 
     checkFavorite();
-  }, [user, psychologistId]);
+  }, [user, psychologist]);
 
   const toggleFavorite = async () => {
     if (!user) {
-      alert("You must be logged in to follow a psychologist.");
+      toast.success("You must be logged in to follow a psychologist.");
       return;
     }
 
@@ -36,7 +41,7 @@ export const FavoriteButton = ({ psychologistId }: FavoriteButtonProps) => {
       await remove(favoriteRef);
       setIsFavorite(false);
     } else {
-      await set(favoriteRef, true);
+      await set(favoriteRef, psychologist);
       setIsFavorite(true);
     }
   };
