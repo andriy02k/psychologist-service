@@ -1,4 +1,5 @@
 export type Psychologist = {
+  id: string;
   avatar_url: string;
   rating: number;
   price_per_hour: number;

@@ -7,6 +7,7 @@ import { Button } from "./ui/button";
 import { Psychologist } from "@/types";
 import { useState } from "react";
 import { AppointmentDialog } from "./AppointmentDialog";
+import { FavoriteButton } from "./ui/favoriteButton";
 
 interface PsychologistCardProps {
   psychologist: Psychologist;
@@ -67,11 +68,7 @@ export const PsychologistCard = ({
                   {psychologist.price_per_hour}$
                 </span>
               </div>
-              <Icon
-                icon="follow"
-                size={20}
-                className="fill-background stroke-foreground sm:w-26 sm:h-26"
-              />
+              <FavoriteButton psychologistId={psychologist.id} />
             </div>
           </div>
 
@@ -102,7 +99,7 @@ export const PsychologistCard = ({
             <Button
               variant="ghost"
               className="text-sm sm:text-md font-medium text-foreground w-fit p-0 mt-3 underline-offset-8 underline"
-              onClick={() => toggleCard(psychologist.avatar_url)}
+              onClick={() => toggleCard(psychologist.id)}
             >
               Read more
             </Button>

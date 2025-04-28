@@ -68,9 +68,9 @@ export const PsychologistList = () => {
         <div className="flex flex-col gap-6 sm:gap-8">
           {paginatedPsychologists.map((psychologist) => (
             <PsychologistCard
-              key={psychologist.avatar_url}
+              key={psychologist.id}
               psychologist={psychologist}
-              isExpanded={expandedCardId === psychologist.avatar_url}
+              isExpanded={expandedCardId === psychologist.id}
               toggleCard={toggleCard}
             />
           ))}
